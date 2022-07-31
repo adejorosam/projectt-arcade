@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mac/Documents/c#-projects/crud-api/crud-api/crud-api.csproj": {}
+    "/Users/imanoel/Documents/repo/test-project/crud-api/crud-api.csproj": {}
   },
   "projects": {
-    "/Users/mac/Documents/c#-projects/crud-api/crud-api/crud-api.csproj": {
+    "/Users/imanoel/Documents/repo/test-project/crud-api/crud-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/Documents/c#-projects/crud-api/crud-api/crud-api.csproj",
+        "projectUniqueName": "/Users/imanoel/Documents/repo/test-project/crud-api/crud-api.csproj",
         "projectName": "crud-api",
-        "projectPath": "/Users/mac/Documents/c#-projects/crud-api/crud-api/crud-api.csproj",
-        "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/Documents/c#-projects/crud-api/crud-api/obj/",
+        "projectPath": "/Users/imanoel/Documents/repo/test-project/crud-api/crud-api.csproj",
+        "packagesPath": "/Users/imanoel/.nuget/packages/",
+        "outputPath": "/Users/imanoel/Documents/repo/test-project/crud-api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mac/.nuget/NuGet/NuGet.Config"
+          "/Users/imanoel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -40,33 +40,35 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[11.0.1, )"
+              "version": "[11.0.0, )"
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "microsoft.entityframeworkcore": {
               "target": "Package",
               "version": "[6.0.7, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
+            "microsoft.entityframeworkcore.design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.7, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "microsoft.entityframeworkcore.sqlserver": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.7, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "microsoft.entityframeworkcore.tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[6.2.3, )"
-            },
-            "VisualStudio.gitignore": {
-              "target": "Package",
-              "version": "[1.0.1, )"
+              "version": "[6.0.7, )"
             }
           },
           "imports": [
@@ -87,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
         }
       }
     }
