@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{15E6EF1B-C8F2-4A4D-869C-27A7E7016EFA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="crud-api/Program.cs">
+    <Files>
+      <File FileName="crud-api/WeatherForecast.cs" Line="1" Column="1" />
+      <File FileName="crud-api/Data/NZWalksDbContext.cs" Line="5" Column="1" />
+      <File FileName="crud-api/Models/Domain/Walk.cs" Line="2" Column="26" />
+      <File FileName="crud-api/Data/DbContext.cs" Line="1" Column="1" />
+      <File FileName="crud-api/Models/Domain/WalkDifficulty.cs" Line="2" Column="11" />
+      <File FileName="crud-api/appsettings.Development.json" Line="12" Column="2" />
+      <File FileName="crud-api/Program.cs" Line="12" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="crud-api" expanded="True">
+            <Node name="crud-api" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.crud-api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MultiItemStartupConfigurations />
+</Properties>

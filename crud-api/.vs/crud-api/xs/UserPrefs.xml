@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{F52BB587-0189-42FC-9F96-AC76083CB003}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.Development.json">
+    <Files>
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="16" />
+      <File FileName="Models/Domain/Walk.cs" Line="1" Column="1" />
+      <File FileName="Models/Domain/Region.cs" Line="1" Column="1" />
+      <File FileName="Data/NZWalksDbContext.cs" Line="9" Column="6" />
+      <File FileName="Controllers/WeatherForecastController.cs" Line="12" Column="7" />
+      <File FileName="WeatherForecast.cs" Line="1" Column="1" />
+      <File FileName="Models/Domain/WalkDifficulty.cs" Line="1" Column="1" />
+      <File FileName="appsettings.Development.json" Line="12" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="crud-api" expanded="True">
+            <Node name="crud-api" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="appsettings.json" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.crud-api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
