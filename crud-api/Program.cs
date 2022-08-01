@@ -1,4 +1,5 @@
 using crud_api.Data;
+using crud_api.Models.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddScoped<IRegionRepository, RegionRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

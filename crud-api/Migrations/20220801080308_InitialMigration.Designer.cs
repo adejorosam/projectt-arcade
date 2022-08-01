@@ -12,7 +12,7 @@ using crud_api.Data;
 namespace crud_api.Migrations
 {
     [DbContext(typeof(NZWalksDbContext))]
-    [Migration("20220731213225_InitialMigration")]
+    [Migration("20220801080308_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
