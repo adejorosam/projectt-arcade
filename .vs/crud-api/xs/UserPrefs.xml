@@ -1,19 +1,34 @@
 ﻿<Properties StartupConfiguration="{15E6EF1B-C8F2-4A4D-869C-27A7E7016EFA}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="crud-api/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="crud-api/Controllers/RegionsController.cs">
     <Files>
       <File FileName="crud-api/WeatherForecast.cs" Line="1" Column="1" />
-      <File FileName="crud-api/Data/NZWalksDbContext.cs" Line="5" Column="1" />
+      <File FileName="crud-api/Data/NZWalksDbContext.cs" Line="10" Column="10" />
       <File FileName="crud-api/Models/Domain/Walk.cs" Line="2" Column="26" />
-      <File FileName="crud-api/Data/DbContext.cs" Line="1" Column="1" />
       <File FileName="crud-api/Models/Domain/WalkDifficulty.cs" Line="2" Column="11" />
-      <File FileName="crud-api/appsettings.Development.json" Line="12" Column="2" />
-      <File FileName="crud-api/Program.cs" Line="12" Column="1" />
+      <File FileName="crud-api/appsettings.Development.json" Line="13" Column="4" />
+      <File FileName="crud-api/appsettings.json" Line="10" Column="3" />
+      <File FileName="crud-api/Controllers/RegionsController.cs" Line="101" Column="25" />
+      <File FileName="crud-api/Models/Domain/Region.cs" Line="9" Column="7" />
+      <File FileName="crud-api/Models/Repository/IRegionRepository.cs" Line="15" Column="1" />
+      <File FileName="crud-api/Models/Repositories/RegionRepository.cs" Line="56" Column="1" />
+      <File FileName="crud-api/Program.cs" Line="17" Column="30" />
+      <File FileName="crud-api/Models/DTO/Region.cs" Line="1" Column="14" />
+      <File FileName="crud-api/Models/Profiles/RegionsProfile.cs" Line="11" Column="31" />
+      <File FileName="crud-api/Models/DTO/AddRegionRequest.cs" Line="18" Column="41" />
+      <File FileName="crud-api/.gitignore" Line="259" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="crud-api" expanded="True">
-            <Node name="crud-api" expanded="True" />
+            <Node name="crud-api" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="RegionsController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True">
+                <Node name="Repositories" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -25,6 +40,8 @@
   <MonoDevelop.Ide.ItemProperties.crud-api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

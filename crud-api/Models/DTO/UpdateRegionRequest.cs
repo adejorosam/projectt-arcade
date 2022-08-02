@@ -1,9 +1,9 @@
 ﻿using System;
 namespace crud_api.Models.DTO
 {
-    public class AddRegionRequest
+    public class UpdateRegionRequest
     {
-        //public Guid Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Name { get; set; }
 

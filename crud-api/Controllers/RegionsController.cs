@@ -18,6 +18,45 @@ namespace crud_api.Controllers {
             this.mapper = mapper;
         }
 
+        [HttpPut]
+        public async Task<IActionResult> UpdateRegionAsync([FromRoute] Guid id, [FromBody] Models.DTO.UpdateRegionRequest updateRegionRequest)
+        {
+            // Convert DTO to Domain model
+            var region = new Models.Domain.Region()
+            {
+                Code = updateRegionRequest.Code,
+                Area = updateRegionRequest.Area,
+                Lat = updateRegionRequest.Lat,
+                Long = updateRegionRequest.Long,
+                Name = updateRegionRequest.Name,
+                Population = updateRegionRequest.Population
+            };
+            //Update Region using repository
+            region = await regionRepository.UpdateAsync(id, region);
+
+            // If null, NOT FOUND
+            if(region == null)
+            {
+                return NotFound();
+            }
+
+            //Convert Domain back to DTO
+            var regionDTO = new Models.DTO.Region()
+            {
+                Id = region.Id,
+                Code = region.Code,
+                Area = region.Area,
+                Lat = region.Lat,
+                Long = region.Long,
+                Name = region.Name,
+                Population = region.Population
+            };
+
+            //Return Ok response
+            return Ok(regionDTO);
+
+        }
+
 
         [HttpGet]
         public async Task<IActionResult> GetAllRegionsAsync()
@@ -60,7 +99,7 @@ namespace crud_api.Controllers {
 
             var regionDTO = mapper.Map<Models.DTO.Region>(region);
 
-            return Ok(region);
+            return Ok(regionDTO);
         }
 
 
@@ -82,8 +121,9 @@ namespace crud_api.Controllers {
             var response = await regionRepository.AddAsync(region);
 
             // Convert back to DTO
-            var regionDTO = new Models.Domain.Region()
+            var regionDTO = new Models.DTO.Region()
             {
+                Id = region.Id,
                 Code = region.Code,
                 Area = region.Area,
                 Lat = region.Lat,
@@ -94,6 +134,38 @@ namespace crud_api.Controllers {
 
             return CreatedAtAction(nameof(GetRegionAsync), new {id=regionDTO.Id}, regionDTO);
 
+        }
+
+        [HttpDelete]
+        [Route("{id:guid}")]
+        public async Task<IActionResult> DeleteRegionAsync(Guid id)
+        {
+            //Get region from DB
+            var region = await regionRepository.DeleteAsync(id);
+
+            //If null, not found
+            if(region == null)
+            {
+                return NotFound();
+            }
+
+            //Convert response back to DTO
+            //var regionDTO = new Models.DTO.Region()
+            //{
+            //    Id = region.Id,
+            //    Code = region.Code,
+            //    Area = region.Area,
+            //    Lat = region.Lat,
+            //    Long = region.Long,
+            //    Name = region.Name,
+            //    Population = region.Population
+            //};
+
+            var regionDTO = mapper.Map<Models.DTO.Region>(region);
+
+
+            //return Ok response
+            return Ok(regionDTO);
         }
     }
 }
