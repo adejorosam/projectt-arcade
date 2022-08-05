@@ -44,7 +44,7 @@ namespace crud_api.Models.Repositories
 
         public async Task<Walk> UpdateAsync(Guid id, Walk walk)
         {
-            var existingWalk = await nZWalksDbContext.Walks.FirstOrDefaultAsync(x => x.Id == id);
+            var existingWalk = await nZWalksDbContext.Walks.FindAsync(id);
 
             if (existingWalk == null)
             {
@@ -64,7 +64,7 @@ namespace crud_api.Models.Repositories
 
         public async Task<Walk> DeleteAsync(Guid id)
         {
-            var walk = await nZWalksDbContext.Walks.FirstOrDefaultAsync(x => x.Id == id);
+            var walk = await nZWalksDbContext.Walks.FindAsync(id);
 
             if (walk == null)
             {

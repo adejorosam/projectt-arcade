@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using crud_api.Models.Domain;
 using AutoMapper;
@@ -14,18 +10,27 @@ namespace crud_api.Controllers
     public class WalksController : Controller
     {
         private readonly IWalkRepository walkRepository;
+        private readonly IRegionRepository regionRepository;
         private readonly IMapper mapper;
 
-        public WalksController(IWalkRepository walkRepository, IMapper mapper)
+        public WalksController(IWalkRepository walkRepository, IMapper mapper, IRegionRepository regionRepository)
         {
             this.walkRepository = walkRepository;
+            this.regionRepository = regionRepository;
             this.mapper = mapper;
         }
 
-        [HttpPut]
+
+
+    [HttpPut]
         [Route("{id:guid}")]
         public async Task<IActionResult> UpdateWalkAsync([FromRoute] Guid id, [FromBody] Models.DTO.UpdateWalkRequest updateWalkRequest)
         {
+            // Validate the request
+            if (!await ValidateUpdateWalkAsync(updateWalkRequest))
+            {
+                return BadRequest(ModelState);
+            }
             // Convert DTO to Domain model
             var walk = new Models.Domain.Walk()
             {
@@ -61,6 +66,13 @@ namespace crud_api.Controllers
         [HttpPost]
         public async Task<IActionResult> AddWalkAsync([FromBody] Models.DTO.AddWalkRequest addWalkRequest)
         {
+            // Validate the request
+            if (!(await ValidateAddWalkAsync(addWalkRequest)))
+            {
+                return BadRequest(ModelState);
+            }
+
+
             //Request to Domain model
             var walk = new Models.Domain.Walk()
             {
@@ -134,5 +146,46 @@ namespace crud_api.Controllers
             //return Ok response
             return Ok(walkDTO);
         }
+
+        #region
+        private async Task<bool> ValidateUpdateWalkAsync(Models.DTO.UpdateWalkRequest updateWalkRequest)
+        {
+            var region = await regionRepository.GetAsync(updateWalkRequest.RegionId);
+            if (region == null)
+            {
+                ModelState.AddModelError(nameof(updateWalkRequest.RegionId),
+                        $"{nameof(updateWalkRequest.RegionId)} is invalid");
+            }
+
+
+            if (ModelState.ErrorCount > 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
+
+        #region
+        private async Task<bool> ValidateAddWalkAsync(Models.DTO.AddWalkRequest addWalkRequest)
+        {
+            var region = await regionRepository.GetAsync(addWalkRequest.RegionId);
+            if(region == null)
+            {
+                ModelState.AddModelError(nameof(addWalkRequest.RegionId),
+                        $"{nameof(addWalkRequest.RegionId)} is invalid");
+            }
+
+
+            if (ModelState.ErrorCount > 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
     }
+
 }

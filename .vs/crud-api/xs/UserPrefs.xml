@@ -1,34 +1,31 @@
 ﻿<Properties StartupConfiguration="{15E6EF1B-C8F2-4A4D-869C-27A7E7016EFA}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="crud-api/Controllers/RegionsController.cs">
+  <MonoDevelop.Ide.ItemProperties.crud-api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="crud-api/Program.cs">
     <Files>
-      <File FileName="crud-api/WeatherForecast.cs" Line="1" Column="1" />
-      <File FileName="crud-api/Data/NZWalksDbContext.cs" Line="10" Column="10" />
-      <File FileName="crud-api/Models/Domain/Walk.cs" Line="2" Column="26" />
-      <File FileName="crud-api/Models/Domain/WalkDifficulty.cs" Line="2" Column="11" />
-      <File FileName="crud-api/appsettings.Development.json" Line="13" Column="4" />
-      <File FileName="crud-api/appsettings.json" Line="10" Column="3" />
-      <File FileName="crud-api/Controllers/RegionsController.cs" Line="101" Column="25" />
-      <File FileName="crud-api/Models/Domain/Region.cs" Line="9" Column="7" />
-      <File FileName="crud-api/Models/Repository/IRegionRepository.cs" Line="15" Column="1" />
-      <File FileName="crud-api/Models/Repositories/RegionRepository.cs" Line="56" Column="1" />
-      <File FileName="crud-api/Program.cs" Line="17" Column="30" />
-      <File FileName="crud-api/Models/DTO/Region.cs" Line="1" Column="14" />
-      <File FileName="crud-api/Models/Profiles/RegionsProfile.cs" Line="11" Column="31" />
-      <File FileName="crud-api/Models/DTO/AddRegionRequest.cs" Line="18" Column="41" />
-      <File FileName="crud-api/.gitignore" Line="259" Column="16" />
+      <File FileName="crud-api/Models/Repositories/IWalkDifficultyRepository.cs" Line="1" Column="1" />
+      <File FileName="crud-api/Models/Repositories/IWalkRepository.cs" Line="3" Column="1" />
+      <File FileName="crud-api/Models/Repositories/TokenHandlerRepository.cs" Line="32" Column="16" />
+      <File FileName="crud-api/Program.cs" Line="75" Column="44" />
+      <File FileName="crud-api/Models/Domain/Role.cs" Line="12" Column="1" />
+      <File FileName="crud-api/Models/Domain/Walk.cs" Line="1" Column="1" />
+      <File FileName="crud-api/Models/Domain/WalkDifficulty.cs" Line="6" Column="9" />
+      <File FileName="crud-api/Models/Domain/User.cs" Line="14" Column="12" />
+      <File FileName="crud-api/Models/Domain/User_Role.cs" Line="14" Column="25" />
+      <File FileName="crud-api/Data/NZWalksDbContext.cs" Line="34" Column="43" />
+      <File FileName="crud-api/Models/Repositories/StaticUserRepository.cs" Line="42" Column="25" />
+      <File FileName="crud-api/Migrations/20220805060559_Initial migration.Designer.cs" Line="227" Column="1" />
+      <File FileName="crud-api/Models/Domain/Region.cs" Line="16" Column="39" />
+      <File FileName="crud-api/Models/Repositories/IUserRepository.cs" Line="12" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="crud-api" expanded="True">
-            <Node name="crud-api" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="RegionsController.cs" selected="True" />
-              </Node>
-              <Node name="Models" expanded="True">
-                <Node name="Repositories" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="crud-api" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -37,11 +34,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.crud-api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

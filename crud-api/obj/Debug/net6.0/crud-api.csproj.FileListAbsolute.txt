@@ -263,3 +263,8 @@
 /Users/mac/Documents/c#-projects/crud-api/crud-api/bin/Debug/net6.0/runtimes/win-arm64/lib/net6.0/dotnet-aspnet-codegenerator-design.exe
 /Users/mac/Documents/c#-projects/crud-api/crud-api/bin/Debug/net6.0/AutoMapper.dll
 /Users/mac/Documents/c#-projects/crud-api/crud-api/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/mac/Documents/c#-projects/crud-api/crud-api/bin/Debug/net6.0/FluentValidation.dll
+/Users/mac/Documents/c#-projects/crud-api/crud-api/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/mac/Documents/c#-projects/crud-api/crud-api/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/mac/Documents/c#-projects/crud-api/crud-api/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mac/Documents/c#-projects/crud-api/crud-api/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
