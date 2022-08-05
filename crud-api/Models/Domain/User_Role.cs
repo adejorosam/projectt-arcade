@@ -13,9 +13,6 @@ namespace crud_api.Models.Domain
 
         public Role Role { get; set; }
 
-
-
-
     }
 }
 

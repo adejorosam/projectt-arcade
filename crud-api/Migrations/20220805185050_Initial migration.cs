@@ -67,26 +67,25 @@ namespace crud_api.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "User_Roles",
+                name: "Users_Roles",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     RoleId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User_Roles", x => x.Id);
+                    table.PrimaryKey("PK_Users_Roles", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_User_Roles_Roles_UserId",
-                        column: x => x.UserId,
+                        name: "FK_Users_Roles_Roles_RoleId",
+                        column: x => x.RoleId,
                         principalTable: "Roles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_User_Roles_Users_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_Users_Roles_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -120,14 +119,14 @@ namespace crud_api.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_User_Roles_UserId",
-                table: "User_Roles",
-                column: "UserId");
+                name: "IX_Users_Roles_RoleId",
+                table: "Users_Roles",
+                column: "RoleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_User_Roles_UserId1",
-                table: "User_Roles",
-                column: "UserId1");
+                name: "IX_Users_Roles_UserId",
+                table: "Users_Roles",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Walks_RegionId",
@@ -143,7 +142,7 @@ namespace crud_api.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "User_Roles");
+                name: "Users_Roles");
 
             migrationBuilder.DropTable(
                 name: "Walks");

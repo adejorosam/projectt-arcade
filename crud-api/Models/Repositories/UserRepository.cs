@@ -25,7 +25,7 @@ namespace crud_api.Models.Repositories
                 return null;
             }
 
-            var userRoles = await nzWalksDbContext.User_Roles.Where(x => x.UserId == user.Id).ToListAsync();
+            var userRoles = await nzWalksDbContext.Users_Roles.Where(x => x.UserId == user.Id).ToListAsync();
             if (userRoles.Any())
             {
                 user.Roles = new List<string>();

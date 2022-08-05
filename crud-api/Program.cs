@@ -14,40 +14,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(
-//    options
-//    =>
-//{
-//    var securityScheme = new OpenAPISecurityScheme
-//    {
-//        Name = "JWT Authentication",
-//        Description = "Enter a valid JWT bearer token",
-//        Index = ParameterLocation.Header,
-//        Type = SecuritySchemeType.Http,
-//        Scheme = "bearer",
-//        BearerFormat = "JWT",
-//        ReferenceEqualityComparer = new OpenApiReference
-//        {
-//            Id = JwtBearerDefaults.AuthenticationScheme,
-//            Type = ReferenceType.SecurityScheme
-//        }
-//    };
-
-//    options.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
-//    options.AddSecurityRequirement(new OpenApiSecurityRequirement
-//    {
-//        {securityScheme, new string[] {} }
-//    });
-//}
-);
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddFluentValidation(options => options.RegisterValidatorsFromAssemblyContaining<Program>());
 
 
-builder.Services.AddDbContext<NZWalksDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalks"));
-});
+//builder.Services.AddDbContext<NZWalksDbContext>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalks"));
+//});
+
+builder.Services.AddDbContext<NZWalksDbContext>();
+
 
 var region = builder.Configuration.GetConnectionString("NZWalks");
 

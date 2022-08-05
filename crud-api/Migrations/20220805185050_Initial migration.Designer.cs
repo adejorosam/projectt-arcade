@@ -12,7 +12,7 @@ using crud_api.Data;
 namespace crud_api.Migrations
 {
     [DbContext(typeof(NZWalksDbContext))]
-    [Migration("20220805060559_Initial migration")]
+    [Migration("20220805185050_Initial migration")]
     partial class Initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -113,16 +113,13 @@ namespace crud_api.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserId1")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
 
                     b.HasIndex("UserId");
 
-                    b.HasIndex("UserId1");
-
-                    b.ToTable("User_Roles");
+                    b.ToTable("Users_Roles");
                 });
 
             modelBuilder.Entity("crud_api.Models.Domain.Walk", b =>
@@ -172,13 +169,13 @@ namespace crud_api.Migrations
                 {
                     b.HasOne("crud_api.Models.Domain.Role", "Role")
                         .WithMany("UserRoles")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("crud_api.Models.Domain.User", "User")
                         .WithMany("UserRoles")
-                        .HasForeignKey("UserId1")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
