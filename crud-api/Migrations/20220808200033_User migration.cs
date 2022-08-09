@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace crud_api.Migrations
 {
-    public partial class Initialmigration : Migration
+    public partial class Usermigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -12,8 +12,8 @@ using crud_api.Data;
 namespace crud_api.Migrations
 {
     [DbContext(typeof(NZWalksDbContext))]
-    [Migration("20220805185050_Initial migration")]
-    partial class Initialmigration
+    [Migration("20220808200033_User migration")]
+    partial class Usermigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

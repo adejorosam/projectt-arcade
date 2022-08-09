@@ -4,7 +4,7 @@
 
 namespace crud_api.Migrations
 {
-    public partial class Usermigration : Migration
+    public partial class Initialmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
